@@ -1,11 +1,12 @@
+// context
+import { useContext } from "react";
+import { AlgunContexto } from "../components/HooksUseContext";
+
 import React from "react";
 import HookUseState from "../components/HookUseState";
 import HookUseReducer from "../components/HookUseReducer";
 import HookUseEffect from "../components/HookUseEffect";
-
-// context
-import { useContext } from "react";
-import { AlgunContexto } from "../components/HooksUseContext";
+import HooksUseRef from "../components/HooksUseRef";
 
 const Home = () => {
   const { constextValue } = useContext(AlgunContexto);
@@ -17,6 +18,7 @@ const Home = () => {
       <HookUseEffect />
       <h2>UseContext</h2>
       <p>valor do context: {constextValue}</p>
+      <HooksUseRef />
     </div>
   );
 };
